@@ -39,7 +39,7 @@ app.post("/benign", (req, res) => {
     console.log("Validation error: It is not in JSON Format");
   }
   b_sample.label = 0;
-  console.log("line 87: " + JSON.stringify(b_sample));
+  console.log("line 35: " + JSON.stringify(b_sample));
   const db = dbClient.db();
 
   db.collection("dataset").deleteMany({ link: link }, (err, result) => {
@@ -76,7 +76,7 @@ app.post("/malicious", async (req, res) => {
   //add one more column {label:1}
   m_data.label = 1;
   // let m_sample = [m_data];
-  console.log("line 35: " + JSON.stringify(m_data));
+  console.log("line 70: " + JSON.stringify(m_data));
   //and insert to the database
   const db = dbClient.db();
   console.log("data found " + data);
